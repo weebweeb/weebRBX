@@ -13,7 +13,7 @@ local MinimapHandler = {}
 MinimapHandler.__index = MinimapHandler
 last = 0
 
--- ---------- Constructor / defaults (from your original, trimmed) ----------
+-- ---------- Constructor / defaults (trimmed) ----------
 function MinimapHandler.new(config)
 	local self = setmetatable({}, MinimapHandler)
 
@@ -142,7 +142,7 @@ function MinimapHandler:RenderRooms(originCF)
 			frame.Rotation = math.deg(rawAngle - playerAngle)
 		end
 
-		-- <<<< Aspect ratio–corrected position
+		-- <<<< Aspect ratioï¿½corrected position
 		local px = 0.5 + rx * normX
 		local py = 0.5 + ry * normY
 		frame.Position = UDim2.new(px, 0, py, 0)
